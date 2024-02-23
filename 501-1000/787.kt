@@ -1,4 +1,5 @@
-
+class Solution {
+   
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
       val costs = IntArray(n) { Int.MAX_VALUE / 2 }
       costs[src] = 0
@@ -9,3 +10,4 @@
       }
       return costs[dst].takeIf { it < Int.MAX_VALUE / 2 } ?: -1
     }
+}
